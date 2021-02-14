@@ -370,6 +370,11 @@ $( document ).ready( function()
 			}
 		}
 
+		if ( productJsonLdObject.google_product_category !== undefined )
+		{
+			$( 'head' ).append( '<meta property="product:category" content="' + productJsonLdObject.google_product_category + '" />' );
+		}
+
 		/* On sale? */
 		let validUntil = null;
 		if ( $( '.special-ending-in' ).length )
